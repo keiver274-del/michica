@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>El Mundo de Snoopy · Feliz Cumpleaños</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-stripe"><span>🐾  EL MUNDO DE SNOOPY  🐾</span></div>
+
+  <!-- ============ SECCIÓN 1: BIENVENIDA ============ -->
+  <section class="section" id="section-bienvenida">
+    <img class="deco deco-huella deco-a1" src="huella1.png" alt="" aria-hidden="true">
+    <img class="deco deco-huella deco-a2" src="huella2.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-a3" src="snoopy-scooter-deco.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-a4" src="snoopy-corazon.png" alt="" aria-hidden="true">
+    <div class="welcome-card">
+      <img class="doghouse-photo reveal" src="snoopy-doghouse.png" alt="Snoopy durmiendo sobre su casita con Woodstock">
+      <h1 class="reveal reveal-delay-1">¡Feliz Cumpleaños,<br><span class="accent" id="nombre-hero">Marfer</span>!</h1>
+      <p class="subtitle reveal reveal-delay-2">Preparado con mucho cariño</p>
+      <p class="reveal reveal-delay-3">Hoy celebramos otro año de risas, anécdotas y momentos que valen oro.
+         Recorré esta página como si fuera una historieta hecha para vos.</p>
+      <button class="btn reveal reveal-delay-4" data-goto="section-galeria">Continuar →</button>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 2: GALERÍA POLAROID ============ -->
+  <section class="section" id="section-galeria">
+    <img class="deco deco-huella deco-b1" src="huella2.png" alt="" aria-hidden="true">
+    <img class="deco deco-huella deco-b2" src="huella1.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-b3" src="snoopy-woodstock-sentado.png" alt="" aria-hidden="true">
+    <div class="section-header reveal">
+      <h2>Galería de Recuerdos</h2>
+      <p>Momentos que valen oro</p>
+    </div>
+    <div class="polaroid-grid" id="polaroid-grid"></div>
+    <button class="btn reveal reveal-delay-2" style="margin-top:40px" data-goto="section-quiz">Continuar→</button>
+  </section>
+
+  <!-- ============ SECCIÓN 3: QUIZ ============ -->
+  <section class="section" id="section-quiz">
+    <img class="deco deco-huella deco-c1" src="huella1.png" alt="" aria-hidden="true">
+    <img class="deco deco-huella deco-c2" src="huella2.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-c3" src="snoopy-woodstock-sentado.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-c4" src="snoopy-scooter-deco.png" alt="" aria-hidden="true">
+    <div class="section-header reveal">
+      <h2>¿Quién la conoce mejor?</h2>
+      <p>Snoopy quiere saber si realmente conoces a Mafer</p>
+    </div>
+
+    <div class="quiz-card reveal reveal-delay-1">
+      <div class="quiz-progress" id="quiz-progress"></div>
+
+      <div class="quiz-step active" data-step="1">
+        <h3>Para empezar</h3>
+        <p class="q-sub">Contanos quién sos y arriesgá un dato</p>
+        <div class="field">
+          <label for="input-nombre">Tu nombre</label>
+          <input type="text" id="input-nombre" placeholder="Escribí tu nombre">
+        </div>
+        <div class="field">
+          <label for="input-signo">¿De qué signo creés que es la cumpleañera?</label>
+          <input type="text" id="input-signo" placeholder="Ej: Piscis">
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="2">
+        <h3>Verdadero o Falso</h3>
+        <p class="q-sub">Pregunta 1 de 2</p>
+        <p style="font-weight:700; margin-bottom:14px;">Su serie favorita es Peanuts.</p>
+        <div class="tf-row" id="vf1-options">
+          <div class="option" data-value="true">Verdadero</div>
+          <div class="option" data-value="false">Falso</div>
+        </div>
+        <p style="font-weight:700; margin:22px 0 14px;">Le tiene miedo a las arañas.</p>
+        <div class="tf-row" id="vf2-options">
+          <div class="option" data-value="true">Verdadero</div>
+          <div class="option" data-value="false">Falso</div>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="3">
+        <h3>Elección Múltiple</h3>
+        <p class="q-sub">Pregunta 1 de 2</p>
+        <p style="font-weight:700; margin-bottom:14px;">¿Cuál es su postre favorito?</p>
+        <div class="option-list" id="mc1-options">
+          <div class="option" data-value="a">Torta de chocolate</div>
+          <div class="option" data-value="b">Helado</div>
+          <div class="option" data-value="c">Flan</div>
+        </div>
+        <p style="font-weight:700; margin:22px 0 14px;">¿Cuál es su lugar favorito para vacacionar?</p>
+        <div class="option-list" id="mc2-options">
+          <div class="option" data-value="a">La playa</div>
+          <div class="option" data-value="b">La montaña</div>
+          <div class="option" data-value="c">Una ciudad nueva</div>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="4">
+        <h3>Dibujá a Snoopy</h3>
+        <p class="q-sub">Usá el mouse o el dedo para dibujar</p>
+        <div class="canvas-wrap">
+          <canvas id="drawCanvas" width="600" height="360"></canvas>
+        </div>
+        <div class="canvas-tools">
+          <div class="swatch active" style="background:#1A1A1A" data-color="#1A1A1A"></div>
+          <div class="swatch" style="background:#D6291F" data-color="#D6291F"></div>
+          <div class="swatch" style="background:#F5C242" data-color="#F5C242"></div>
+          <div class="swatch" style="background:#8FC1E3" data-color="#8FC1E3"></div>
+          <div class="swatch" style="background:#4E9F5B" data-color="#4E9F5B"></div>
+          <button class="clear-btn" id="btn-clear-canvas">Borrar</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="5">
+        <h3>Una anécdota especial</h3>
+        <p class="q-sub">Contale un recuerdo que quieras compartir</p>
+        <textarea id="input-anecdota" placeholder="Escribí..."></textarea>
+      </div>
+
+      <div class="quiz-step" data-step="6">
+        <div class="score-result">
+          <h3>¡Listo, <span id="resultado-nombre">amigo/a</span>!</h3>
+          <p class="q-sub">Tu puntaje</p>
+          <div class="big-num"><span id="resultado-puntaje">0</span>/4</div>
+          <p style="margin-top:10px;">Gracias por participar. Ahora sí, llegó la hora de la sorpresa.</p>
+        </div>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="btn btn-outline" id="btn-atras">← Atrás</button>
+        <button class="btn" id="btn-siguiente">Siguiente →</button>
+      </div>
+    </div>
+
+    <button class="btn btn-yellow" id="btn-ver-carta" style="margin-top:40px; display:none;" data-goto="section-carta">Guardar→</button>
+  </section>
+
+  <!-- ============ SECCIÓN 4: CARTA SECRETA ============ -->
+  <section class="section" id="section-carta">
+    <img class="deco deco-huella deco-d1" src="huella1.png" alt="" aria-hidden="true">
+    <img class="deco deco-huella deco-d2" src="huella2.png" alt="" aria-hidden="true">
+    <img class="deco deco-snoopy deco-d3" src="snoopy-corazon.png" alt="" aria-hidden="true">
+    <div class="section-header reveal">
+      <h2>Carta de Snoopy</h2>
+      <p>Tocá el sobre para abrirlo</p>
+    </div>
+
+    <div class="envelope-wrap reveal reveal-delay-1" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-woodstock"></div>
+      <div class="envelope-flap"></div>
+    </div>
+    <p class="envelope-hint reveal reveal-delay-2" id="envelope-hint"> Tocá el sobre</p>
+
+    <div class="letter-paper" id="letter-paper"></div>
+  </section>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <footer>Te quiero © Snoopy · Hecho x Snoopy/keiver</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
